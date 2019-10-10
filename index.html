@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+    <title>Mario Memory Game - Assignment 5 (JQuery)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assignment 5">
+    <meta name="keywords" content="memory game application">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="background">
+        <div class="game">
+            <header> </header>
+            <div id="modal">
+                <div class="modal-window">
+                    <h1 id="modal-title">Welcome to Mario Memory Game!</h1>
+                    <p id="modal-message">
+                        Current player is highlighted in <span class="player-highlight">orange</span>,
+                        and a bonus round is rewarded for matching a pair.<br /><br />
+                        Please type in your names and select a grid size to begin.
+                    </p>
+                    <form action="" onsubmit="return false">
+                        <label for="name1">Player 1:</label>
+                        <input type="text" id="player1" name="name1" size="20" maxlength="20" required />
+                        <label for="name2">Player 2:</label>
+                        <input type="text" id="player2" name="name2" size="20" maxLength="20" required />
+                        <label for="gridSize">Grid size:</label>
+                        <select id="grid-size" name="gridSize">
+                            <option value="2">2</option>
+                            <option value="4" selected>4</option>
+                            <option value="6">6</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                            <option value="12">12</option>
+                            <option value="14">14</option>
+                            <option value="16">16</option>
+                        </select>
+                        <input id="play-button" type="submit" value="Play">
+                    </form>
+                </div>
+            </div>
+            <div class="cards-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Load the script last -->
+    <script src="memorygame.js"></script>
+</body>
+
+</html>
